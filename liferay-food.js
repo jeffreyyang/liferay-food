@@ -1,15 +1,10 @@
 var gmarkers1 = [];
 var markers1 = [];
-var infowindow = new google.maps.InfoWindow({
-    content: ''
-});
+var infowindow;
 
 // Our markers
 markers1 = [
-    ['0', 'Title', 52.4357808, 4.991315699999973, 'car'],
-    ['1', 'Title', 52.4357808, 4.981315699999973, 'third'],
-    ['2', 'Title', 52.4555687, 5.039231599999994, 'car'],
-    ['3', 'Title', 52.4555687, 5.029231599999994, 'second']
+    ['0', 'Liferay', 33.997673, -117.814438, 'Diamond Bar']
 ];
 
 /**
@@ -21,14 +16,16 @@ function initialize() {
     var mapOptions = {
         zoom: 12,
         center: center,
-        mapTypeId: google.maps.MapTypeId.map
-
+        mapTypeId: google.maps.MapTypeId.MAP
     };
 
     map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
     for (i = 0; i < markers1.length; i++) {
         addMarker(markers1[i]);
     }
+    infowindow = new google.maps.InfoWindow({
+      content: ''
+    });
 }
 
 /**
@@ -75,7 +72,7 @@ filterMarkers = function (category) {
         }
         // Categories don't match
         else {
-            marker.setVisible(false);
+            marker.setVisible(true);
         }
     }
 }

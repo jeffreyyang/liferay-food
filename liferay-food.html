@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="config.js"></script>
-  <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key={GOOGLE_API_KEY}&callback=initialize">
-  </script>
+  <!-- <script src="config.js"></script> -->
+  <script async defer  src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize"></script>
   <script src="liferay-food.js?"></script>
   <link rel="stylesheet" type="text/css" href="liferay-food.css" />
 </head>
@@ -13,10 +11,7 @@
   <h3>Liferay Food</h3>
   <div id="map-canvas"></div>
   <select id="type" onchange="filterMarkers(this.value);">
-      <option value="">Please select category</option>
-      <option value="second">second</option>
-      <option value="car">car</option>
-      <option value="third">third</option>
+    <option value="Diamond Bar">Liferay Diamond Bar</option>
   </select>
 </body>
 </html>
